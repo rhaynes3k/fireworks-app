@@ -1,0 +1,53 @@
+{
+  "fireworks":[
+    {
+      "id": 1,
+      "name": "Bottle Rocket",
+      "qty": 10,
+      "price": 12
+    },
+    {
+      "id": 2,
+      "name": "Firecracker",
+      "qty": 100,
+      "price": 40
+    },
+    {
+      "id": 3,
+      "name": "Roman Candle",
+      "qty": 50,
+      "price": 65
+    },
+    {
+      "id": 4,
+      "name": "Neon Master Missles",
+      "qty": 20,
+      "price": 45
+    },
+    {
+      "id": 5,
+      "name": "Pride and Honor",
+      "qty": 17,
+      "price": 120
+    },
+    {
+      "id": 6,
+      "name": "Party Pack 6",
+      "qty": 38,
+      "price": 140
+
+    },
+    {
+      "id": 7,
+      "name": "Bucket-o-fun",
+      "qty": 20,
+      "price": 85
+    },
+    {
+      "id": 8,
+      "name": "Tropical Thunder",
+      "qty": 1,
+      "price": 145
+    }
+  ]
+}
