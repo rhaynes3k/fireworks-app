@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 // import {Card} from 'semantic-ui-react'
 
 function FireworksCards(props){
-  
+
   return (
     <Link to={`/fireworks/${props.fc.id}`}>
     <div id='card-border'>

@@ -19,7 +19,7 @@ function App() {
       <Router>
         <Routes>
           <Route exact path='/fireworks' element= {<FireworksContainer />} />
-          <Route exact path='/fireworks/:id' element= {<FWdetail />} />
+          
           <Route exact path='/new' element= {<NewInvForm />} />
         </Routes>
       </Router>
