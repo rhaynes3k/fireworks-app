@@ -1,6 +1,6 @@
 import React from 'react'
-import FireworksCards from './fireworksCard'
-import {useState, useEffect} from 'react'
+import FireworksCards from './fireworksCards'
+import {useEffect} from 'react'
 import fireworks from '../dbjson'
 
 function FireworksAll(){
@@ -12,7 +12,7 @@ function FireworksAll(){
     <>
       <input type="text" className='srch' placeholder='Search'></input>
       <div className='container'>
-        {fireworks.map(fc => <FireworksCards key={fc.id} fc={fc}/>)}
+        {fireworks.map(fc => <FireworksCards key={fc.id} fc={fc} />)}
       </div>
     </>
   )

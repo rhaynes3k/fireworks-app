@@ -5,7 +5,8 @@ let fireworks = [
     "name": "Bottle Rocket",
     "qty": 10,
     "price": 12,
-    "image": require("./images/BottleRockets.png")
+    "image": require("./images/BottleRockets.png"),
+    "detail": '200ft up and pop'
   },
   {
     "id": 2,
