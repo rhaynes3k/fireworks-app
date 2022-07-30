@@ -2,8 +2,9 @@ import React from 'react'
 import FireworksCards from './fireworksCards'
 import {useEffect} from 'react'
 import fireworks from '../dbjson'
+import { Link } from "react-router-dom"
 
-function FireworksAll(){
+function FireworksContainer(){
   useEffect(() => {
     console.log("US ran")
   }, [])
@@ -17,4 +18,4 @@ function FireworksAll(){
     </>
   )
 }
-export default FireworksAll
+export default FireworksContainer

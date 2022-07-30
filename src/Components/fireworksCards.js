@@ -6,7 +6,7 @@ function FireworksCards(props){
 
   return (
     <Link to={`/fireworks/${props.fc.id}`}>
-    <div id='card-border'>
+    <div id='cards-border'>
       <p className='f-card'>{props.fc.name}</p>
       <img className='fw-img' src={props.fc.image} alt='N/A'/>
       <h5 className='f-card'>${props.fc.price}/pk</h5>

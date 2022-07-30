@@ -1,15 +1,27 @@
 import React from 'react'
-// import fireworks from '../dbjson'
+import {useState, useEffect} from 'react'
+import fireworks from '../dbjson'
+import {useParams} from 'react-router-dom'
 
 function FWdetail (props) {
-  console.log(props.fc)
+  const [firework, setFirework] = useState(null)
+  const [isLoaded, setIsLoaded] = useState(null)
+  const fireworkID = useParams().id
+  useEffect(() => {
+    const thisFirework = fireworks.find(x => x.id == fireworkID)
+    setFirework(thisFirework)
+    setIsLoaded(true)
+  },[])
+  if(!isLoaded) return <h2>Loading...</h2>
+
   return (
     <>
-      <div id='card-border'>
-        <p className='f-card'>{props.fc.name}</p>
-        <img className='fw-img' src={props.fc.image} alt='N/A'/>
-        <h5 className='f-card'>${props.fc.price}/pk</h5>
-        <p className='f-card'>{props.fc.detail}</p>
+      <div id='card'>
+        <h3>Name: {firework.name}</h3>
+        <h3>Quantity: {firework.qty}</h3>
+        <h3>Price: ${firework.price}</h3>
+        <img className='pix' src={firework.image} />
+        <h3>{firework.detail}</h3>    
       </div>
     </>
   )
