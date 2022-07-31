@@ -4,7 +4,8 @@ import FireworksContainer from './Components/fireworksContainer'
 import FWdetail from './Components/fw-detail'
 import NewInvForm from './Components/newInvForm'
 import Buttons from './Components/newButton'
-
+import DataSource from './dataSource'
+import {useState, useEffect} from 'react'
 import {
   BrowserRouter as Router,
   Routes,
@@ -13,6 +14,19 @@ import {
 } from "react-router-dom";
 
 function App() {
+
+  useEffect(
+    () => {
+      fetch('http://localhost:8000/fireworks')
+      .then(res => {
+        return res.json()
+      })
+      .then(data => {
+        console.log(data)
+      })
+      console.log('useEffect ran')
+    }, [])
+
   return (
     <div className="App">
       <header className="App-header">

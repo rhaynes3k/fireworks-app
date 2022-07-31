@@ -1,4 +1,4 @@
-
+import NewInvForm from './Components/newInvForm'
 let fireworks = [
   {
     "id": 1,
