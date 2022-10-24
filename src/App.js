@@ -40,7 +40,7 @@ function App() {
     <div className="App">
 
       <header className="App-header">
-        <h3>Boom Kits</h3>
+        <h1>Boom Kits</h1>
       </header>
       <Router>
         <section>

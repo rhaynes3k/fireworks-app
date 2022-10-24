@@ -58,9 +58,16 @@
     },
     {
       "id": 9,
-      "name": "Block Buster",
-      "qty": "3",
-      "price": "75",
+      "name": "Nuclear Option",
+      "qty": "1",
+      "price": "1000",
+      "img": "./images/Jumping Jacks.png"
+    },
+    {
+      "id": 10,
+      "name": "Hellraiser",
+      "qty": "2",
+      "price": "200",
       "img": "./images/Jumping Jacks.png"
     }
   ]

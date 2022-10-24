@@ -30,6 +30,12 @@ p {
   color: white;
 }
 
+.f-text {
+  font-size: 30px;
+  margin-top: auto;
+  color: red;
+}
+
 .fw-img {
   height: 200px;
   width: 200px;
@@ -71,7 +77,7 @@ p {
 
 #cards-border {
   border: 2px solid black;
-  background-color: lightgreen;
+  background-color: #1144ab;
 }
 
 #card {
@@ -84,7 +90,7 @@ p {
 
 .form {
   margin-left: 50px;
-  font-size: 20px;
+  font-size: 30px;
 }
 /* .srch {
   border-style: solid;
