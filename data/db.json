@@ -1,53 +1,67 @@
 {
-  "fireworks":[
+  "fireworks": [
     {
       "id": 1,
       "name": "Bottle Rocket",
       "qty": 10,
-      "price": 12
+      "price": 12,
+      "image": "BottleRockets.png"
     },
     {
       "id": 2,
       "name": "Firecracker",
       "qty": 100,
-      "price": 40
+      "price": 40,
+      "image": "Firecrackers.png"
     },
     {
       "id": 3,
       "name": "Roman Candle",
       "qty": 50,
-      "price": 65
+      "price": 65,
+      "image": "roman.png"
     },
     {
       "id": 4,
       "name": "Neon Master Missles",
       "qty": 20,
-      "price": 45
+      "price": 45,
+      "image": "Neons.png"
     },
     {
       "id": 5,
       "name": "Pride and Honor",
       "qty": 17,
-      "price": 120
+      "price": 120,
+      "image": "PrideHonor.png"
     },
     {
       "id": 6,
       "name": "Party Pack 6",
       "qty": 38,
-      "price": 140
-
+      "price": 140,
+      "image": "PartyPack6.png"
     },
     {
       "id": 7,
       "name": "Bucket-o-fun",
       "qty": 20,
-      "price": 85
+      "price": 85,
+      "image": "Bucket.png"
     },
     {
       "id": 8,
       "name": "Tropical Thunder",
       "qty": 1,
-      "price": 145
+      "price": 145,
+      "image": "Tropical.png"
+    },
+    {
+      "id": 9,
+      "name": "Block Buster",
+      "qty": "3",
+      "price": "75",
+      "img": "./images/Jumping Jacks.png"
     }
   ]
 }

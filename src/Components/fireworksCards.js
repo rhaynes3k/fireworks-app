@@ -3,13 +3,15 @@ import {Link} from 'react-router-dom'
 // import {Card} from 'semantic-ui-react'
 
 function FireworksCards(props){
+  const {id, name, image, qty, price} = props.fc
 
   return (
-    <Link to={`/fireworks/${props.fc.id}`}>
+    <Link to={`/fireworks/${id}`}>
     <div id='cards-border'>
-      <p className='f-card'>{props.fc.name}</p>
-      <img className='fw-img' src={props.fc.image} alt='N/A'/>
-      <h5 className='f-card'>${props.fc.price}/pk</h5>
+      <p className='f-card'>{name}</p>
+      <img className='fw-img' src="../images/BottleRockets.png" alt="" />
+      <h5 className='f-card'>{qty}/pk</h5>
+      <h5 className='f-card'>${price}/pk</h5>
     </div>
     </Link>
   )

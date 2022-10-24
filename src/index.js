@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-// import FireworksAll from './Components/fireworksAll';
 // import NewInvForm from './Components/NewInvForm';
 
 const root = document.getElementById('root')

@@ -8,6 +8,16 @@ body {
   background-color: lightblue;
   background-repeat: no-repeat;
 }
+/* .homeImage {
+  background-image: url('./images/firew.jpeg');
+  background-size: cover;
+  height: 500px;
+} */
+.formDiv {
+  background-image: url('./images/firew.jpeg');
+  background-size: cover;
+  color: lightgray;
+}
 p {
   font-size: 80px;
   margin-top: auto;
@@ -52,8 +62,11 @@ p {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
-  background-color: lightblue;
+  /* background-color: blue; */
   /* background-image: url('./images/firew.jpeg'); */
+  background-image: url('./images/firew.jpeg');
+  background-size: cover;
+
 }
 
 #cards-border {
