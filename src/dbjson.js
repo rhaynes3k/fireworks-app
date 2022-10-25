@@ -1,4 +1,3 @@
-import NewInvForm from './Components/newInvForm'
 let fireworks = [
   {
     "id": 1,
@@ -64,7 +63,33 @@ let fireworks = [
     "price": 145,
     "image": require("./images/Tropical.png"),
     "detail": 'Light the fuse and WATCH OUT!!! Lasts over 2 minutes!'
+  },
+  {
+    "id": 9,
+    "name": "Tropical Thunder",
+    "qty": 1,
+    "price": 145,
+    "image": require("./images/Tropical.png"),
+    "detail": 'Light the fuse and WATCH OUT!!! Lasts over 2 minutes!'
+  },
+  {
+    "id": 10,
+    "name": "Tropical Thunder",
+    "qty": 1,
+    "price": 145,
+    "image": require("./images/Tropical.png"),
+    "detail": 'Light the fuse and WATCH OUT!!! Lasts over 2 minutes!'
+  },
+  {
+    "id": 11,
+    "name": "Tropical Thunder",
+    "qty": 1,
+    "price": 145,
+    "image": require("./images/Tropical.png"),
+    "detail": 'Light the fuse and WATCH OUT!!! Lasts over 2 minutes!'
   }
+
+
 ]
 
 export default fireworks

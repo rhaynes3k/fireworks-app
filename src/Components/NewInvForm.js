@@ -2,7 +2,7 @@ import React from 'react'
 import fireworks from '../dbjson'
 
 function NewInvForm (props) {
-const {onAddNew} = props
+const {onAdd} = props
 console.log(props)
 function doit(e) {
   e.preventDefault();
@@ -11,8 +11,9 @@ function doit(e) {
   let quantity = document.getElementById('qty').value
   let price = document.getElementById('price').value
   let img = document.getElementById('img').value
+  let stk = document.getElementById('stk').value
   console.log("Clicked", name, fireworks)
-  let newAdd = {'id': fireworks.length + 1, 'name': name, 'qty': quantity, 'price': price, 'img': img}
+  let newAdd = {'id': fireworks.length + 1, 'name': name, 'qty': quantity, 'price': price, 'img': img, 'inStock': stk}
   console.log(newAdd)
   fetch('http://localhost:3500/fireworks',{
     method: 'POST',
@@ -24,7 +25,7 @@ function doit(e) {
   .then(response => response.json())
   .then(data => {
     console.log(data)
-    onAddNew(data)
+    onAdd(data)
     console.log(fireworks)
   })
   fireworks.push(newAdd)
@@ -38,6 +39,7 @@ function doit(e) {
           Quantity <input type='text' name='Quantity' id='qty' /><br/>
           Price <input type='text' name='Price'  id='price'/><br/>
           Image <input type='text' name='Image'  id='img'/><br/>
+          In Stock <input type='text' name='stk'  id='stk'/><br/>
           Submit <input type='submit' name='Submit' value='Submit' /><br/>
         </form>
       </div>

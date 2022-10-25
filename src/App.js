@@ -1,9 +1,12 @@
 import React from 'react'
 import './App.css'
 import FireworksContainer from './Components/fireworksContainer'
+import FireworksCards from './Components/fireworksCards'
 import FWdetail from './Components/fw-detail'
 import NewInvForm from './Components/newInvForm'
-import Buttons from './Components/newButton'
+import Totals from './Components/totals'
+
+// import Buttons from './Components/newButton'
 import {useState, useEffect} from 'react'
 import {
   BrowserRouter as Router,
@@ -16,13 +19,18 @@ function App() {
 
   const [fWorks, setFireworks] = useState([])
 
-  const onAddNew = (newAdd) => {
+  const onAdd = (newAdd) => {
     setFireworks(fWorks => {
       return [...fWorks, newAdd]
     })
-    console.log(onAddNew)
+    console.log(onAdd)
   }
-
+  const onEdit = (newAdd) => {
+    setFireworks(fWorks => {
+      return [...fWorks, newAdd]
+    })
+    console.log(onAdd)
+  }
   useEffect(
     () => {
       fetch('http://localhost:3500/fireworks')
@@ -34,6 +42,7 @@ function App() {
         setFireworks(newFetch)
       })
     }, [])
+
     console.log(fWorks)
 
   return (
@@ -45,10 +54,10 @@ function App() {
       <Router>
         <section>
           <NavLink to='/'>
-            <input type='button' name='cont' value='Home'/>
+            <input type='button' name='home' value='Home'/>
           </NavLink>
           <NavLink to='fireworks'>
-            <input type='button' name='cont' value='All Fireworks'/>
+            <input type='button' name='all' value='All Fireworks'/>
           </NavLink>
           <NavLink to='fireworks/new'>
           <input type='button' name='new' value='New Add'/>
@@ -56,12 +65,12 @@ function App() {
         </section>
         <Routes>
           <Route exact path='/' />
-          <Route exact path='/fireworks' element= {<FireworksContainer fwks={fWorks} />} />
-          <Route exact path='/fireworks/new' element= {<NewInvForm onAddNew={onAddNew}/>} />
+          <Route exact path='/fireworks' element= {<FireworksContainer fwks={fWorks} onAdd={onAdd} />} />
+          <Route exact path='/fireworks/new' element= {<NewInvForm onAdd={onAdd}/>} />
           <Route exact path='/fireworks/:id' element= {<FWdetail />} />
         </Routes>
       </Router>
-
+      <Totals />
     </div>
   );
 }
