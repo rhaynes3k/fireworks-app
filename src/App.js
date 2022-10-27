@@ -23,13 +23,13 @@ function App() {
     setFireworks(fWorks => {
       return [...fWorks, newAdd]
     })
-    console.log(onAdd)
   }
   const onEdit = (newAdd) => {
-    setFireworks(fWorks => {
-      return [...fWorks, newAdd]
+    console.log('State Updated', newAdd)
+    setFireworks(newAdd => {
+      return fWorks
     })
-    console.log(onAdd)
+    console.log(fWorks)
   }
   useEffect(
     () => {
@@ -65,12 +65,11 @@ function App() {
         </section>
         <Routes>
           <Route exact path='/' />
-          <Route exact path='/fireworks' element= {<FireworksContainer fwks={fWorks} onAdd={onAdd} />} />
+          <Route exact path='/fireworks' element= {<FireworksContainer fwks={fWorks} onEdit={onEdit} />} />
           <Route exact path='/fireworks/new' element= {<NewInvForm onAdd={onAdd}/>} />
           <Route exact path='/fireworks/:id' element= {<FWdetail />} />
         </Routes>
       </Router>
-      <Totals />
     </div>
   );
 }

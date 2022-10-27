@@ -55,38 +55,6 @@ let fireworks = [
     "price": 85,
     "image": require("./images/Bucket.png"),
     "detail": 'Assorted fountains and rockets'
-  },
-  {
-    "id": 8,
-    "name": "Tropical Thunder",
-    "qty": 1,
-    "price": 145,
-    "image": require("./images/Tropical.png"),
-    "detail": 'Light the fuse and WATCH OUT!!! Lasts over 2 minutes!'
-  },
-  {
-    "id": 9,
-    "name": "Tropical Thunder",
-    "qty": 1,
-    "price": 145,
-    "image": require("./images/Tropical.png"),
-    "detail": 'Light the fuse and WATCH OUT!!! Lasts over 2 minutes!'
-  },
-  {
-    "id": 10,
-    "name": "Tropical Thunder",
-    "qty": 1,
-    "price": 145,
-    "image": require("./images/Tropical.png"),
-    "detail": 'Light the fuse and WATCH OUT!!! Lasts over 2 minutes!'
-  },
-  {
-    "id": 11,
-    "name": "Tropical Thunder",
-    "qty": 1,
-    "price": 145,
-    "image": require("./images/Tropical.png"),
-    "detail": 'Light the fuse and WATCH OUT!!! Lasts over 2 minutes!'
   }
 
 

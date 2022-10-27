@@ -1,5 +1,4 @@
 import React from 'react'
-import fireworks from '../dbjson'
 
 function NewInvForm (props) {
 const {onAdd} = props
@@ -12,8 +11,7 @@ function doit(e) {
   let price = document.getElementById('price').value
   let img = document.getElementById('img').value
   let stk = document.getElementById('stk').value
-  console.log("Clicked", name, fireworks)
-  let newAdd = {'id': fireworks.length + 1, 'name': name, 'qty': quantity, 'price': price, 'img': img, 'inStock': stk}
+  let newAdd = {'name': name, 'qty': quantity, 'price': price, 'img': img, 'inStock': stk}
   console.log(newAdd)
   fetch('http://localhost:3500/fireworks',{
     method: 'POST',
@@ -26,9 +24,7 @@ function doit(e) {
   .then(data => {
     console.log(data)
     onAdd(data)
-    console.log(fireworks)
   })
-  fireworks.push(newAdd)
 }
   return (
     <>
