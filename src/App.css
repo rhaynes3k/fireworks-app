@@ -1,7 +1,6 @@
 
 .App {
   text-align: center;
-  /* background-image: url('./images/firew2.jpg'); */
 }
 
 body {
@@ -9,12 +8,11 @@ body {
   background-repeat: no-repeat;
 }
 /* .homeImage {
-  background-image: url('./images/firew.jpeg');
   background-size: cover;
   height: 500px;
 } */
 .formDiv {
-  background-image: url('./images/firew.jpeg');
+  background-image: linear-gradient(red, black, green);
   background-size: cover;
   color: lightgray;
 }
@@ -64,13 +62,20 @@ p {
   height: 280px;
 }
 
+.totList {
+  margin-right: 250px;
+  margin-top: 50px;
+}
+
+.totListSub {
+  margin-right: 250px;
+}
+
 .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
   /* background-color: blue; */
-  /* background-image: url('./images/firew.jpeg'); */
-  background-image: url('./images/firew.jpeg');
   background-size: cover;
 
 }
@@ -81,8 +86,8 @@ p {
 }
 
 #card {
-  margin-left: 400px;
-  margin-right: 400px;
+  margin-left: 350px;
+  margin-right: 350px;
   margin-top: 100px;
   border: 2px solid black;
   background-color: #158cd1;

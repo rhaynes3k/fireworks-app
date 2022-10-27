@@ -7,9 +7,9 @@ function Totals(props) {
   return(
     <>
       <div className='tot'>
-        <h1>Total</h1>
-        <h2>${props.myPix.sub}</h2>
-        <h5>Sub Total:</h5>
+        <h2>Shopping Cart</h2>
+        <h3 className='totList'>Item Names</h3>
+        <h4 className='totListSub'>Sub Total:</h4>
       </div>
     </>
   )

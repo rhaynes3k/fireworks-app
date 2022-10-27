@@ -40,7 +40,7 @@ function FireworksCards(props){
       <div id='cards-border'>
         <Link to={`/fireworks/${id}`}>
           <p className='f-card'>{name}</p>
-          <img className='fw-img' src={`../../images/${img}`} alt="../../images/genericBomb.jpeg" />
+          <img className='fw-img' src={`images/${img}`} alt="No Picture Available" />
         </Link>
         <h5 className='f-text'>{qty} pcs <br />
           ${price}/pk

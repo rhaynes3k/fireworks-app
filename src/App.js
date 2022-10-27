@@ -20,17 +20,19 @@ function App() {
   const [fWorks, setFireworks] = useState([])
 
   const onAdd = (newAdd) => {
-    setFireworks(fWorks => {
-      return [...fWorks, newAdd]
-    })
+    setFireworks([...fWorks, newAdd])
   }
-  const onEdit = (newAdd) => {
-    console.log('State Updated', newAdd)
-    setFireworks(newAdd => {
-      return fWorks
+
+  const onEdit = (updatedAdd) => {
+    const updatedFWorks = fWorks.map(e => {
+      if(e.id == updatedAdd.id){
+        return {...e, inStock: updatedAdd.inStock}
+      }
     })
-    console.log(fWorks)
-  }
+      console.log(updatedAdd)
+      // setFireworks(updatedFWorks)
+    }
+
   useEffect(
     () => {
       fetch('http://localhost:3500/fireworks')
@@ -70,6 +72,7 @@ function App() {
           <Route exact path='/fireworks/:id' element= {<FWdetail />} />
         </Routes>
       </Router>
+      <Totals />
     </div>
   );
 }
