@@ -20,8 +20,6 @@ function FireworksCards(props){
   // }
 
   const updtStk = (fEdit) => {
-    const updateDom = {}
-    console.log(id)
     fetch(`http://localhost:3500/fireworks/${id}`,{
       method: 'PATCH',
       headers: {
@@ -32,7 +30,7 @@ function FireworksCards(props){
     .then(response => response.json())
     .then(data => {
       props.onEdit(data)
-      console.log('Fetch Ran', data)
+      console.log('Fetch Ran', data, props.fc)
     })
   }
   return (

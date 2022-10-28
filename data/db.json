@@ -1,11 +1,11 @@
 {
   "fireworks": [
     {
-      "name": "Alexandria",
+      "name": "Jumping Jacks",
       "qty": "3",
       "price": "75",
       "img": "jumpingJacks.png",
-      "inStock": 16,
+      "inStock": 15,
       "id": 1
     },
     {
@@ -13,7 +13,7 @@
       "qty": "50",
       "price": "25",
       "img": "BottleRockets.png",
-      "inStock": 485,
+      "inStock": 470,
       "id": 2
     },
     {
@@ -21,7 +21,7 @@
       "qty": "100",
       "price": "40",
       "img": "Firecrackers.png",
-      "inStock": "3000",
+      "inStock": 2990,
       "id": 3
     }
   ]

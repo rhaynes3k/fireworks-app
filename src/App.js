@@ -24,14 +24,15 @@ function App() {
   }
 
   const onEdit = (updatedAdd) => {
-    const updatedFWorks = fWorks.map(e => {
-      if(e.id == updatedAdd.id){
-        return {...e, inStock: updatedAdd.inStock}
+    const newState = fWorks.map(f => {
+      if(f.id === updatedAdd.id) {
+        return {...f, inStock: updatedAdd.inStock}
       }
+      return f
     })
-      console.log(updatedAdd)
-      // setFireworks(updatedFWorks)
-    }
+      console.log(newState)
+      setFireworks(newState)
+  }
 
   useEffect(
     () => {
