@@ -18,6 +18,7 @@ import {
 function App() {
 
   const [fWorks, setFireworks] = useState([])
+  const [totView, setTotView] = useState("")
 
   const onAdd = (newAdd) => {
     setFireworks([...fWorks, newAdd])
@@ -32,6 +33,7 @@ function App() {
     })
       console.log(newState)
       setFireworks(newState)
+      setTotView(<Totals fwks={updatedAdd} />)
   }
 
   useEffect(
@@ -70,10 +72,10 @@ function App() {
           <Route exact path='/' />
           <Route exact path='/fireworks' element= {<FireworksContainer fwks={fWorks} onEdit={onEdit} />} />
           <Route exact path='/fireworks/new' element= {<NewInvForm onAdd={onAdd}/>} />
-          <Route exact path='/fireworks/:id' element= {<FWdetail />} />
+          <Route exact path='/fireworks/:id' element= {<FWdetail fwks={fWorks}/>} />
         </Routes>
       </Router>
-      <Totals />
+      {totView}
     </div>
   );
 }

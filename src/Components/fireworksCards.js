@@ -6,18 +6,18 @@ import Totals from './totals'
 function FireworksCards(props){
   const {id, name, img, qty, price, inStock} = props.fc
   const addToCart = (e) => {
-    let fEdit = {'id': id, 'inStock': `${inStock}`-1}
+    let fEdit = {'id': id, 'inStock': `${inStock}`-1, 'qty': qty, 'price': price}
     updtStk(fEdit)
-    // chkOut(props.fc)
+    chkOut(props.fc)
   }
 
-  let myPix = {
-    'name': props.fc.name,
-    'sub': props.fc.price
+  const chkOut = (pix) => {
+    let myPix = {
+      'name': props.fc.name,
+      'sub': props.fc.price
+    }
+    return myPix
   }
-  // const chkOut = (pix) => {
-  //   return myPix
-  // }
 
   const updtStk = (fEdit) => {
     fetch(`http://localhost:3500/fireworks/${id}`,{

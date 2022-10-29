@@ -80,10 +80,3 @@ img: "./images/Jumping Jacks.png",
 inStock: 3
 }
 ]
-
-const newF = updatedFWorks.map(f => {
-  if(f.id != null){
-    Object.assign({}, f, updatedFWorks.f.id)
-  }
-})
-setFireworks(fWorks.map(obj => updatedFWorks.find(o => o.id === obj.id) || obj))

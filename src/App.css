@@ -3,17 +3,24 @@
   text-align: center;
 }
 
+html {
+  height: 100%;
+}
+
 body {
-  background-color: lightblue;
+  height: 100%;
   background-repeat: no-repeat;
+  background-size: cover;
+  /* background-size: cover; */
+  /* background-image: linear-gradient(red, white, blue); */
+  background-image: linear-gradient(red, white, blue);
 }
 /* .homeImage {
   background-size: cover;
   height: 500px;
 } */
 .formDiv {
-  background-image: linear-gradient(red, black, green);
-  background-size: cover;
+  background-image: inherit;
   color: lightgray;
 }
 p {
@@ -59,7 +66,7 @@ p {
   border-style: solid;
   border-color: #008080;
   width: 400px;
-  height: 280px;
+  height: auto;
 }
 
 .totList {
@@ -75,9 +82,8 @@ p {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
-  /* background-color: blue; */
   background-size: cover;
-
+  background-image: inherit;
 }
 
 #cards-border {
@@ -117,16 +123,3 @@ p {
 .stk2 {
   margin-bottom:-20px;
 }
-/* .srch {
-  border-style: solid;
-
-} */
-
-/* @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
