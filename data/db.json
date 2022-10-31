@@ -5,7 +5,7 @@
       "qty": "3",
       "price": "75",
       "img": "jumpingJacks.png",
-      "inStock": 6,
+      "inStock": 4,
       "details": "Spinning colors of light on ground",
       "id": 1
     },
@@ -41,7 +41,7 @@
       "qty": "20",
       "price": "45",
       "img": "Neons.png",
-      "inStock": "50",
+      "inStock": 49,
       "details": "Flies into the sky and explodes with colorful bursts of light",
       "id": 5
     },
