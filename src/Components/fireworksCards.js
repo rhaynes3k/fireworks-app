@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import Totals from './totals'
+
 // import {Card} from 'semantic-ui-react'
 
 function FireworksCards(props){
@@ -12,9 +13,10 @@ function FireworksCards(props){
   }
 
   const chkOut = (pix) => {
+    let newTot = props.fc.price
     let myPix = {
       'name': props.fc.name,
-      'sub': props.fc.price
+      'sub': newTot
     }
     return myPix
   }
@@ -35,6 +37,7 @@ function FireworksCards(props){
   }
   return (
     <>
+
       <div id='cards-border'>
         <Link to={`/fireworks/${id}`}>
           <p className='f-card'>{name}</p>

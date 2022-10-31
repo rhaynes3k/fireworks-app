@@ -1,4 +1,4 @@
-let fireworks = [
+let fks = [
   {
     "id": 1,
     "name": "Bottle Rocket",
