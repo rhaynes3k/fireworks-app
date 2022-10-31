@@ -23,6 +23,7 @@ function FWdetail (props) {
         <img className='pix' src={`/images/${firework.img}`} alt= "No Picture Available" />
         <h5>{firework.name}</h5>
         <h5>${firework.price}</h5>
+        <h5>{firework.details}</h5>
       </div>
   )
 }

@@ -77,7 +77,7 @@ function App() {
       </Router>
       {totView}
     </div>
-  );
+  )
 }
 
 export default App;

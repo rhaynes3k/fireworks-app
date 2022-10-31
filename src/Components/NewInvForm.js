@@ -11,7 +11,8 @@ function doit(e) {
   let price = document.getElementById('price').value
   let img = document.getElementById('img').value
   let stk = document.getElementById('stk').value
-  let newAdd = {'name': name, 'qty': quantity, 'price': price, 'img': img, 'inStock': stk}
+  let det = document.getElementById('det').value
+  let newAdd = {'name': name, 'qty': quantity, 'price': price, 'img': img, 'inStock': stk, 'details': det}
   console.log(newAdd)
   fetch('http://localhost:3500/fireworks',{
     method: 'POST',
@@ -36,6 +37,7 @@ function doit(e) {
           Price <input type='text' name='Price'  id='price'/><br/>
           Image <input type='text' name='Image'  id='img'/><br/>
           In Stock <input type='text' name='stk'  id='stk'/><br/>
+          Details <input type='text' name='det'  id='det'/><br/>
           Submit <input type='submit' name='Submit' value='Submit' /><br/>
         </form>
       </div>

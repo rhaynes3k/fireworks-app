@@ -6,6 +6,7 @@
       "price": "75",
       "img": "jumpingJacks.png",
       "inStock": 6,
+      "details": "Spinning colors of light on ground",
       "id": 1
     },
     {
@@ -13,7 +14,8 @@
       "qty": "50",
       "price": "25",
       "img": "BottleRockets.png",
-      "inStock": 439,
+      "inStock": 438,
+      "details": "200ft up and pop",
       "id": 2
     },
     {
@@ -22,6 +24,7 @@
       "price": "40",
       "img": "Firecrackers.png",
       "inStock": 2972,
+      "details": "Loud popping sound after light fuse",
       "id": 3
     },
     {
@@ -30,6 +33,7 @@
       "price": "85",
       "img": "roman.png",
       "inStock": 284,
+      "details": "Emits colored ball of light into the sky",
       "id": 4
     },
     {
@@ -38,7 +42,17 @@
       "price": "45",
       "img": "Neons.png",
       "inStock": "50",
+      "details": "Flies into the sky and explodes with colorful bursts of light",
       "id": 5
+    },
+    {
+      "name": "Pride and Honor",
+      "qty": "17",
+      "price": "120",
+      "img": "PrideHonor.png",
+      "inStock": "12",
+      "details": "Assorted fountains and rockets",
+      "id": 6
     }
   ]
 }

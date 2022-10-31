@@ -13,6 +13,7 @@ html {
   background-image: inherit;
   color: lightgray;
 }
+
 p {
   font-size: 80px;
   margin-top: auto;
@@ -37,8 +38,10 @@ p {
 }
 
 .pix {
-  height: 200px;
-  width: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
 }
 
 .images {
