@@ -5,14 +5,15 @@ import {useState} from 'react'
 
 // import {Card} from 'semantic-ui-react'
 
-function FireworksCards({addTot, setAddTot, fc, onEdit}){
+function FireworksCards({addTot, setAddTot, fc, onEdit, setTotView}){
   const {id, name, img, qty, price, inStock} = fc
+
   const addToCart = (e) => {
     let fEdit = {'id': id, 'inStock': `${inStock}`-1, 'qty': qty, 'price': price}
     updtStk(fEdit)
     chkOut(fc)
     let newTot = addTot + fEdit.price
-    // newTot.push(fEdit.price)
+    setTotView(true)
     setAddTot(newTot)
     console.log('addTot', addTot)
   }

@@ -1,7 +1,7 @@
 import React from 'react'
 import {useState} from 'react'
 
-const HomeSlider = ({sl}) => {
+const ImageSlider = ({sl}) => {
 
   return(
 
@@ -10,4 +10,4 @@ const HomeSlider = ({sl}) => {
     </div>
   )
 }
-export default HomeSlider
+export default ImageSlider

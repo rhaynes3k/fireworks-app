@@ -4,8 +4,7 @@ import FireworksContainer from './Components/fireworksContainer'
 import FireworksCards from './Components/fireworksCards'
 import FWdetail from './Components/fw-detail'
 import NewInvForm from './Components/newInvForm'
-import HomeSlider from './Components/homeSlider'
-
+import ImageSlider from './Components/imageSlider'
 // import Buttons from './Components/newButton'
 import {useState, useEffect} from 'react'
 import {
@@ -64,7 +63,7 @@ function App() {
           </NavLink>
         </section>
         <Routes>
-          <Route exact path='/' element={<HomeSlider />} />
+          <Route exact path='/' element={<ImageSlider />} />
           <Route exact path='/fireworks' element= {<FireworksContainer fwks={fWorks} onEdit={onEdit} />} />
           <Route exact path='/fireworks/new' element= {<NewInvForm onAdd={onAdd}/>} />
           <Route exact path='/fireworks/:id' element= {<FWdetail fwks={fWorks}/>} />

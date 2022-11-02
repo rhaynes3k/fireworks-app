@@ -6,13 +6,13 @@ import {useState, useEffect} from 'react'
 function FireworksContainer({fwks, onEdit}) {
   const [addTot, setAddTot] = useState(0)
   const [srch, setSearch] = useState("")
-  const [totView, setTotView] = useState("")
+  const [totView, setTotView] = useState(null)
   const searchResults = fwks.filter(fw => {
     return fw.name.toLowerCase().includes(srch.toLowerCase())
   })
 
   const fireW = searchResults && searchResults.map((f) =>
-   <FireworksCards fc={f} setAddTot={setAddTot} addTot={addTot} key={f.id} onEdit={onEdit}/>)
+   <FireworksCards fc={f} setTotView= {setTotView} setAddTot={setAddTot} addTot={addTot} key={f.id} onEdit={onEdit}/>)
 
   const handleSearch = (e) => {
     setSearch(e.target.value)
@@ -24,7 +24,7 @@ function FireworksContainer({fwks, onEdit}) {
       <div className='container'>
         {fireW}
       </div>
-      <Totals addTot={addTot} />
+      {totView ? <Totals addTot={addTot} /> : null}
 
     </>
   )

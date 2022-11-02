@@ -11,7 +11,6 @@ function NewInvForm ({onAdd}) {
   const [inStock, setStock] = useState(0)
   const [details, setDetails] = useState('')
 
-
   const handleName = (e) =>  {
     setName(e.target.value)
   }
@@ -19,17 +18,18 @@ function NewInvForm ({onAdd}) {
     setQuantity(e.target.value)
   }
   function handlePrice(e) {
-    setPrice(e.target.value)
+    setPrice(parseInt(e.target.value))
   }
   function handleImage(e) {
     setImage(e.target.value)
   }
   function handleStock(e) {
-    setStock(e.target.value)
+    setStock(parseInt(e.target.value))
   }
   function handleDetails(e) {
     setDetails(e.target.value)
   }
+
 function doit(e) {
   e.preventDefault();
 
