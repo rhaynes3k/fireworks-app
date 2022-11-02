@@ -1,82 +1,94 @@
-[
 {
-id: 1,
-name: "Bottle Rocket",
-qty: 10,
-price: 12,
-image: "BottleRockets.png",
-inStock: 4
-},
-{
-id: 2,
-name: "Firecracker",
-qty: 100,
-price: 40,
-image: "Firecrackers.png",
-inStock: 5
-},
-{
-id: 3,
-name: "Roman Candle",
-qty: 50,
-price: 65,
-image: "roman.png",
-inStock: 8
-},
-{
-id: 4,
-name: "Neon Master Missles",
-qty: 20,
-price: 45,
-image: "Neons.png",
-inStock: 15
-},
-{
-id: 5,
-name: "Pride and Honor",
-qty: 17,
-price: 120,
-image: "PrideHonor.png",
-inStock: 12
-},
-{
-id: 6,
-name: "Party Pack 6",
-qty: 38,
-price: 140,
-image: "PartyPack6.png",
-inStock: 45
-},
-{
-id: 7,
-name: "Bucket-o-fun",
-qty: 20,
-price: 85,
-image: "Bucket.png",
-inStock: 52
-},
-{
-id: 8,
-name: "Tropical Thunder",
-qty: 1,
-price: 145,
-image: "Tropical.png",
-inStock: 65
-},
-{
-id: 9,
-name: "Nuclear Option",
-qty: "1",
-price: "1000",
-img: "./images/Jumping Jacks.png",
-inStock: 35
-},
-{
-id: 10,
-name: "Hellraiser",
-qty: "2",
-price: "200",
-img: "./images/Jumping Jacks.png",
-inStock: 3
+  "fireworks": [
+    {
+      "name": "Jumping Jacks",
+      "qty": "300",
+      "price": 75,
+      "img": "jumpingJacks.png",
+      "inStock": 198,
+      "details": "Spinning colors of light on ground",
+      "id": 1
+    },
+    {
+      "name": "Bottle Rockets",
+      "qty": "50",
+      "price": 25,
+      "img": "BottleRockets.png",
+      "inStock": 403,
+      "details": "200ft up and pop",
+      "id": 2
+    },
+    {
+      "name": "Firecracker",
+      "qty": "100",
+      "price": 40,
+      "img": "Firecrackers.png",
+      "inStock": 2952,
+      "details": "Loud popping sound after light fuse",
+      "id": 3
+    },
+    {
+      "name": "Roman Candle",
+      "qty": "50",
+      "price": 85,
+      "img": "roman.png",
+      "inStock": 283,
+      "details": "Emits colored ball of light into the sky",
+      "id": 4
+    },
+    {
+      "name": "Neon Master Missles",
+      "qty": "20",
+      "price": 45,
+      "img": "Neons.png",
+      "inStock": 44,
+      "details": "Flies into the sky and explodes with colorful bursts of light",
+      "id": 5
+    },
+    {
+      "name": "Pride and Honor",
+      "qty": "1 (25 items)",
+      "price": 120,
+      "img": "PrideHonor.png",
+      "inStock": 2,
+      "details": "Assorted fountains and rockets",
+      "id": 6
+    },
+    {
+      "name": "Party Pack 6",
+      "qty": "1 (60 items)",
+      "price": 140,
+      "img": "PartyPack6.png",
+      "inStock": 95,
+      "details": "Assorted fountains and rockets (90 items)",
+      "id": 7
+    },
+    {
+      "name": "Bucket-o-fun",
+      "qty": "1 (40 items)",
+      "price": 85,
+      "img": "Bucket.png",
+      "inStock": 72,
+      "details": "Assorted fountains and rockets",
+      "id": 8
+    },
+    {
+      "name": "Nuclear Option",
+      "qty": "1",
+      "price": 1000,
+      "img": "genericBomb.jpeg",
+      "inStock": 28,
+      "details": "You don't want to know!!",
+      "id": 9
+    },
+    {
+      "name": "Hellraiser",
+      "qty": "2",
+      "price": "600",
+      "img": "genericBomb.jpeg",
+      "inStock": "10",
+      "details": "Have you seen the movie?!?!",
+      "id": 10
+    }
+  ]
 }
-]

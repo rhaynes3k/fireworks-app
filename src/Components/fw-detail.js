@@ -12,12 +12,6 @@ function FWdetail (props) {
     console.log(shwFW)
   }, [])
 
-  console.log(useParams())
-  console.log(firework.img)
-
-
-
-  console.log('Current State', firework)
   return (
       <div id='card'>
         <img className='pix' src={`/images/${firework.img}`} alt= "No Picture Available" />

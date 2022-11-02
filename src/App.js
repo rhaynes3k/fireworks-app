@@ -4,7 +4,7 @@ import FireworksContainer from './Components/fireworksContainer'
 import FireworksCards from './Components/fireworksCards'
 import FWdetail from './Components/fw-detail'
 import NewInvForm from './Components/newInvForm'
-import Totals from './Components/totals'
+import HomeSlider from './Components/homeSlider'
 
 // import Buttons from './Components/newButton'
 import {useState, useEffect} from 'react'
@@ -18,7 +18,6 @@ import {
 function App() {
 
   const [fWorks, setFireworks] = useState([])
-  const [totView, setTotView] = useState("")
 
   const onAdd = (newAdd) => {
     setFireworks([...fWorks, newAdd])
@@ -31,9 +30,7 @@ function App() {
       }
       return f
     })
-      console.log(newState)
       setFireworks(newState)
-      setTotView(<Totals fwks={updatedAdd} />)
   }
 
   useEffect(
@@ -47,8 +44,6 @@ function App() {
         setFireworks(newFetch)
       })
     }, [])
-
-    console.log(fWorks)
 
   return (
     <div className="App">
@@ -69,13 +64,14 @@ function App() {
           </NavLink>
         </section>
         <Routes>
-          <Route exact path='/' />
+          <Route exact path='/' element={<HomeSlider />} />
           <Route exact path='/fireworks' element= {<FireworksContainer fwks={fWorks} onEdit={onEdit} />} />
           <Route exact path='/fireworks/new' element= {<NewInvForm onAdd={onAdd}/>} />
           <Route exact path='/fireworks/:id' element= {<FWdetail fwks={fWorks}/>} />
         </Routes>
       </Router>
-      {totView}
+
+
     </div>
   )
 }

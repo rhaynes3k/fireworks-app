@@ -1,21 +1,26 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import Totals from './totals'
+import {useState} from 'react'
 
 // import {Card} from 'semantic-ui-react'
 
-function FireworksCards(props){
-  const {id, name, img, qty, price, inStock} = props.fc
+function FireworksCards({addTot, setAddTot, fc, onEdit}){
+  const {id, name, img, qty, price, inStock} = fc
   const addToCart = (e) => {
     let fEdit = {'id': id, 'inStock': `${inStock}`-1, 'qty': qty, 'price': price}
     updtStk(fEdit)
-    chkOut(props.fc)
+    chkOut(fc)
+    let newTot = addTot + fEdit.price
+    // newTot.push(fEdit.price)
+    setAddTot(newTot)
+    console.log('addTot', addTot)
   }
 
   const chkOut = (pix) => {
-    let newTot = props.fc.price
+    let newTot = fc.price
     let myPix = {
-      'name': props.fc.name,
+      'name': fc.name,
       'sub': newTot
     }
     return myPix
@@ -31,8 +36,7 @@ function FireworksCards(props){
     })
     .then(response => response.json())
     .then(data => {
-      props.onEdit(data)
-      console.log('Fetch Ran', data, props.fc)
+      onEdit(data)
     })
   }
   return (

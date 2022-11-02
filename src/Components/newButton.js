@@ -5,7 +5,6 @@ function Buttons () {
   <div className='lk-btn'>
     <input type='button' value='button' />
   </div>
-
   )
 }
 export default Buttons

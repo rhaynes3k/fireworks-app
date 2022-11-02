@@ -122,3 +122,9 @@ p {
 .stk2 {
   margin-bottom:10px;
 }
+
+.homePic {
+  height: 600px;
+  width: 800px;
+  background-size: cover;
+}
