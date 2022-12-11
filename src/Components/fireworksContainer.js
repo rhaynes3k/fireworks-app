@@ -1,9 +1,9 @@
 import React from 'react'
 import FireworksCards from './fireworksCards'
 import Totals from './totals'
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 
-function FireworksContainer({fwks, onEdit}) {
+function FireworksContainer({fwks, onStockEdit}) {
   const [addTot, setAddTot] = useState(0)
   const [srch, setSearch] = useState("")
   const [totView, setTotView] = useState(null)
@@ -12,7 +12,7 @@ function FireworksContainer({fwks, onEdit}) {
   })
 
   const fireW = searchResults && searchResults.map((f) =>
-   <FireworksCards fc={f} setTotView= {setTotView} setAddTot={setAddTot} addTot={addTot} key={f.id} onEdit={onEdit}/>)
+   <FireworksCards fc={f} setTotView={setTotView} setAddTot={setAddTot} addTot={addTot} key={f.id} onStockEdit={onStockEdit}/>)
 
   const handleSearch = (e) => {
     setSearch(e.target.value)
