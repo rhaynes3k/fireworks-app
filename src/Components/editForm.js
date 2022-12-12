@@ -9,7 +9,7 @@ function EditForm({fwks, onEdit}) {
   const [fImg, setfImg] = useState()
   const [fInStock, setfInStock] = useState()
   const [fDetails, setfDetails] = useState()
-
+  const [submit, setSubmit] = useState(true)
   const [fEdit, setFEdit] = useState({})
   const fireworkID = useParams().id
 
@@ -40,6 +40,15 @@ function EditForm({fwks, onEdit}) {
 
   function handleinStock(e) {
     setfInStock(e.target.value)
+  }
+
+  function pWordChk(e) {
+    let pw = prompt('Enter Password Jerk!')
+    if(pw == 123) {
+      setSubmit(false)
+    } else {
+      setSubmit(true)
+    }
   }
 
   function editForm(e) {
@@ -91,13 +100,13 @@ function EditForm({fwks, onEdit}) {
         <div className='formDiv'>
         <h1>New Inventory Form</h1>
           <form className='form' id='newAdd' onSubmit={editForm} >
-            Name <input type='text' placeholder={fEdit.name} value={fName} name='Name' onChange={handleName} label='Name' /><br/>
+            Name <input type='text' placeholder={fEdit.name} value={fName} name='Name' onChange={handleName} label='Name' onClick={(e)=>{pWordChk()}}/><br/>
             Quantity <input type='text' placeholder={fEdit.qty} value={fQty} name='Quantity' onChange={handleQty} /><br/>
             Price <input type='number' placeholder={fEdit.price} value={fPrice} name='Price'  onChange={handlePrice}/><br/>
             Image <input type='text' placeholder={fEdit.img} value={fImg} name='Image'  onChange={handleImg}/><br/>
             In Stock <input type='number' placeholder={fEdit.inStock} step="1" value={fInStock} name='stk'  onChange={handleinStock}/><br/>
             Details <input type='text' placeholder={fEdit.details} value={fDetails} name='det'  onChange={handleDetails}/><br/>
-            Submit <input type='submit' name='Submit' value='Submit' /><br/>
+            Submit <input type='submit' disabled={submit} name='Submit' value='Submit' /><br/>
           </form>
         </div>
       </>
