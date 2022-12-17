@@ -1,21 +1,33 @@
 import React from 'react'
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 
-function Totals({addTot, cartList}) {
-  console.log(addTot, cartList)
+function Totals({cartList, setCartList}) {
+  console.log(cartList)
   const [list, setList] = useState(false)
+  const [addTot, setAddTot] = useState(0)
 
-  let invList = cartList.map((l, index) => <li id={index}> {l.name} - ${l.price} <input id={index} type='button' value='Delete' onClick={remove}/> </li>)
+  let invList = cartList.map((l, index) =>
+    <li id={index}> {l.name} - ${l.price} <input id={l.id} type='button' value='Delete' onClick={remove} /> </li>)
+    let newTot
   console.log(invList)
 
+useEffect(
+  () => {
+    console.log(cartList, addTot)
+    cartList.map(t => setAddTot(addTot + t.price))
+    console.log(addTot)
+}, [cartList])
+
+  console.log(addTot)
+
   function remove(e) {
-    console.log('Clicked', e.target.id)
-    let newList = invList.filter((l) => l.props.id.toString() !== e.target.id)
+    console.log('Clicked', parseInt(e.target.id))
+    let newList = cartList.filter(list => list.id != parseInt(e.target.id))
+    setCartList(newList)
     console.log(newList)
-    invList = newList
-    console.log(invList)
   }
 
+  console.log(addTot)
   return(
     <>
       <div className='tot'>
