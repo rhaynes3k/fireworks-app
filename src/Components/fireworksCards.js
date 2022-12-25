@@ -4,42 +4,17 @@ import {Link} from 'react-router-dom'
 // import {Card} from 'semantic-ui-react'
 
 function FireworksCards({addTot, setAddTot, cartList, setCartList, fc, onStockEdit, setTotView}){
+
   const {id, name, img, qty, price, inStock} = fc
+
   const addToCart = (e) => {
-    let fEdit = {'id': id, name: name, 'inStock': `${inStock}`-1, 'qty': qty, 'price': price}
-    updtStk(fEdit)
-    chkOut(fc)
+    let fEdit = {'id': id, 'key': cartList.length, 'name': name, 'inStock': `${inStock}`-1, 'qty': qty, 'price': price}
+    onStockEdit(fEdit)
     setCartList(cartList => [...cartList, fEdit])
-    let newTot = addTot + parseInt(fEdit.price)
     setTotView(true)
-    setAddTot(newTot)
-    console.log('addTot', addTot)
-  }
-  console.log(cartList)
-
-  const chkOut = (pix) => {
-    let newTot = fc.price
-    let myPix = {
-      'name': fc.name,
-      'sub': newTot
-    }
-    return myPix
+    console.log('addTot', addTot, 'cartList', cartList)
   }
 
-  const updtStk = (fEdit) => {
-    fetch(`http://localhost:3500/fireworks/${id}`,{
-      method: 'PATCH',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(fEdit)
-    })
-    .then(response => response.json())
-    .then(data => {
-      console.log(data)
-      onStockEdit(data)
-    })
-  }
   return (
       <div id='cards-border'>
         <Link to={`/fireworks/${id}`}>

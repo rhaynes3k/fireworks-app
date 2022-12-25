@@ -3,26 +3,24 @@ import {useState, useEffect} from 'react'
 
 function Totals({cartList, setCartList}) {
   console.log(cartList)
-  const [list, setList] = useState(false)
   const [addTot, setAddTot] = useState(0)
 
-  let invList = cartList.map((l, index) =>
-    <li id={index}> {l.name} - ${l.price} <input id={l.id} type='button' value='Delete' onClick={remove} /> </li>)
-    let newTot
+  let invList = cartList.map((l, index) => <li id={l.key} > {l.name} - ${l.price} <input id={l.key} type='button' value='Delete' onClick={remove} /> </li>)
   console.log(invList)
 
 useEffect(
   () => {
     console.log(cartList, addTot)
-    cartList.map(t => setAddTot(addTot + t.price))
+    let i = 0
+    setAddTot(cartList.map(t => t.price).reduce((acc, t) => acc + t, i))
     console.log(addTot)
-}, [cartList])
+}, [cartList, setCartList])
 
   console.log(addTot)
 
   function remove(e) {
-    console.log('Clicked', parseInt(e.target.id))
-    let newList = cartList.filter(list => list.id != parseInt(e.target.id))
+    console.log('Clicked', parseInt(e.target.id)+1)
+    let newList = cartList.filter(list => list.key != parseInt(e.target.id))
     setCartList(newList)
     console.log(newList)
   }
