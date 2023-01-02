@@ -1,9 +1,12 @@
 import React from 'react'
 import {useState, useEffect} from 'react'
 
-function Totals({cartList, setCartList}) {
+function Totals({cartList, setCartList, onStockEdit}) {
   console.log(cartList)
   const [addTot, setAddTot] = useState(0)
+  const [chObj, setChObj] = useState()
+
+
 
   let invList = cartList.map((l, index) => <li id={l.key} > {l.name} - ${l.price} <input id={l.key} type='button' value='Delete' onClick={remove} /> </li>)
   console.log(invList)
@@ -25,6 +28,17 @@ useEffect(
     console.log(newList)
   }
 
+  function handleCheckOut(e) {
+    console.log(e.target, 'Clicked Check Out', cartList)
+    cartList && cartList.map(ch => {
+      onStockEdit(ch)
+      console.log(ch)
+      }
+    )
+    alert('Clicked Check Out')
+  }
+
+
   console.log(addTot)
   return(
     <>
@@ -34,6 +48,7 @@ useEffect(
           {invList}
         </ol>
         <h3 className='totList'>Total ${addTot}</h3>
+        <input type='button' value='Check Out' onClick={handleCheckOut}/>
       </div>
     </>
   )
