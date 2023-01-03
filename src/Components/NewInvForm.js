@@ -4,16 +4,16 @@ import {useState} from 'react'
 function NewInvForm ({onAdd}) {
 
   const [name, setName] = useState('')
-  console.log(name)
   const [quantity, setQuantity] = useState('')
-  const [price, setPrice] = useState(0)
+  const [price, setPrice] = useState()
   const [img, setImage] = useState('')
-  const [inStock, setStock] = useState(0)
+  const [inStock, setStock] = useState()
   const [details, setDetails] = useState('')
 
   const handleName = (e) =>  {
     setName(e.target.value)
   }
+  console.log(name)
   function handleQuantity(e) {
     setQuantity(e.target.value)
   }
@@ -48,6 +48,7 @@ function doit(e) {
     onAdd(data)
   })
 }
+
   return (
     <>
       <div className='formDiv'>

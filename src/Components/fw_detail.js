@@ -11,6 +11,7 @@ function FW_detail ({fwks}) {
   const [pw, setPw] = useState('')
   const [showForm, setShowForm] = useState('')
   const [text, setText] = useState('Edit Here')
+
   function invEdit(e) {
     console.log('Clicked', firework)
     setShowPw(true)
@@ -39,10 +40,6 @@ function FW_detail ({fwks}) {
   }, [])
   console.log(firework)
 
-  const edit = {
-    color: 'white'
-  }
-
   return (
     <div>
       <div id='card'>
@@ -50,10 +47,10 @@ function FW_detail ({fwks}) {
         <h5>{firework.name}</h5>
         <h5>${firework.price}</h5>
         <h5>{firework.details}</h5>
-      </div>
         <input type='button' value="Edit" onClick={invEdit} />
-        {showPw ? <form onSubmit={chkPw}> <input type="text" placeholder="Enter Password" value={pw} onChange={handlePw} /> </form> : ''}
+        {showPw ? <form onSubmit={chkPw}> <input type="password" placeholder="Enter Password" value={pw} onChange={handlePw} /> </form> : ''}
         {showForm ? <Link to={`/fireworks/new/${firework.id}`}><input type='button' value='Edit Here' /> </Link> : ''}
+      </div>
     </div>
   )
 }

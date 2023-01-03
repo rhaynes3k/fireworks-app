@@ -8,11 +8,10 @@ function FireworksCards({addTot, setAddTot, cartList, setCartList, fc, onStockEd
   const {id, name, img, qty, price, inStock} = fc
 
   const addToCart = (e) => {
-    let fEdit = {'id': id, 'key': cartList.length, 'name': name, 'inStock': `${inStock}`-1, 'qty': qty, 'price': price}
-    onStockEdit(fEdit)
+    let fEdit = {'id': id, 'key': cartList.length, 'name': name, 'inStock': inStock, 'qty': qty, 'price': price}
     setCartList(cartList => [...cartList, fEdit])
     setTotView(true)
-    console.log('addTot', addTot, 'cartList', cartList)
+    console.log('addTot', addTot, 'cartList', cartList, 'FEDIT', fEdit)
   }
 
   return (

@@ -35,6 +35,7 @@ useEffect(
       console.log(ch)
       }
     )
+    setCartList([])
     alert('Clicked Check Out')
   }
 

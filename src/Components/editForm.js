@@ -9,7 +9,6 @@ function EditForm({fwks, onEdit}) {
   const [fImg, setfImg] = useState()
   const [fInStock, setfInStock] = useState()
   const [fDetails, setfDetails] = useState()
-  const [submit, setSubmit] = useState(true)
   const [fEdit, setFEdit] = useState({})
 
   const fireworkID = useParams().id

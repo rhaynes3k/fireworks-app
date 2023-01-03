@@ -1,22 +1,40 @@
 {
   "fireworks": [
     {
-      "name": "Bottle Rockets",
-      "qty": "300",
-      "price": 60,
-      "img": "BottleRockets.png",
-      "inStock": 4640,
-      "details": "Flies 200ft up and pop!",
+      "name": "Firecrackers",
+      "qty": "100",
+      "price": 25,
+      "img": "Firecrackers.png",
+      "inStock": 997,
+      "details": "Loud popping sound after light fuse",
       "id": 1
     },
     {
-      "name": "Firecracker",
-      "qty": "100",
-      "price": 40,
-      "img": "Firecrackers.png",
-      "inStock": 5193,
-      "details": "Loud popping sound after light fuse",
+      "name": "Bottle Rockets",
+      "qty": "50",
+      "price": 20,
+      "img": "BottleRockets.png",
+      "inStock": 14975,
+      "details": "Flies 200ft up and pop!",
       "id": 2
+    },
+    {
+      "name": "Jumping Jacks",
+      "qty": "20",
+      "price": 10,
+      "img": "jumpingJacks.png",
+      "inStock": 24987,
+      "details": "Spinning colors of light on ground",
+      "id": 3
+    },
+    {
+      "name": "Roman Candle",
+      "qty": "10",
+      "price": 15,
+      "img": "roman.png",
+      "inStock": 5998,
+      "details": "Emits colored ball of light into the sky",
+      "id": 4
     }
   ]
 }
