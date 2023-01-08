@@ -5,7 +5,7 @@
       "qty": "100",
       "price": 25,
       "img": "Firecrackers.png",
-      "inStock": 997,
+      "inStock": 969,
       "details": "Loud popping sound after light fuse",
       "id": 1
     },
@@ -14,7 +14,7 @@
       "qty": "50",
       "price": 20,
       "img": "BottleRockets.png",
-      "inStock": 14975,
+      "inStock": 14965,
       "details": "Flies 200ft up and pop!",
       "id": 2
     },
@@ -23,7 +23,7 @@
       "qty": "20",
       "price": 10,
       "img": "jumpingJacks.png",
-      "inStock": 24987,
+      "inStock": 253,
       "details": "Spinning colors of light on ground",
       "id": 3
     },
@@ -32,7 +32,7 @@
       "qty": "10",
       "price": 15,
       "img": "roman.png",
-      "inStock": 5998,
+      "inStock": 5996,
       "details": "Emits colored ball of light into the sky",
       "id": 4
     }

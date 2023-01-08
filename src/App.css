@@ -150,3 +150,17 @@ input.textbox {
 h3 {
   margin-bottom: -10px;
 }
+
+.totCnt {
+  display:flex;
+  margin: 110px;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.btn3 {
+  height: 30px;
+  width: 30px;
+  font-size: 20px;
+  margin-bottom: inherit;
+}

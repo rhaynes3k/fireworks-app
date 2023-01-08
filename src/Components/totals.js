@@ -1,21 +1,21 @@
 import React from 'react'
 import {useState, useEffect} from 'react'
 
-function Totals({cartList, setCartList, onStockEdit}) {
+function Totals({cartList, setCartList, onStockEdit, cnt, setCnt}) {
   console.log(cartList)
   const [addTot, setAddTot] = useState(0)
   const [chObj, setChObj] = useState()
 
 
 
-  let invList = cartList.map((l, index) => <li id={l.key} > {l.name} - ${l.price} <input id={l.key} type='button' value='Delete' onClick={remove} /> </li>)
+  let invList = cartList.map((l, index) => <li id={l.key} > ({l.cnt}) {l.name} - ${l.price * l.cnt} <input id={l.key} type='button' value='Delete' onClick={remove} /> </li>)
   console.log(invList)
 
 useEffect(
   () => {
     console.log(cartList, addTot)
     let i = 0
-    setAddTot(cartList.map(t => t.price).reduce((acc, t) => acc + t, i))
+    setAddTot(cartList.map(t => t.price*t.cnt).reduce((acc, t) => acc + t, i))
     console.log(addTot)
 }, [cartList, setCartList])
 

@@ -40,7 +40,7 @@ function App() {
     const newState = fWorks.map(f => {
       if(f.id == updateStock.id) {
         console.log(f.name)
-        return {...f, inStock: updateStock.inStock - 1}
+        return {...f, inStock: updateStock.inStock - updateStock.cnt}
       }
       console.log('UPDATED CHK OUT OBJECT', f)
       return f
