@@ -4,13 +4,14 @@ import {useParams} from 'react-router-dom'
 import {Link} from 'react-router-dom'
 import EditForm from './newInvForm'
 
-function FW_detail ({fwks}) {
+function FW_detail ({fwks, delObj}) {
   const [firework, setFirework] = useState({})
   const fireworkID = useParams().id
   const [showPw, setShowPw] = useState(false)
   const [pw, setPw] = useState('')
   const [showForm, setShowForm] = useState('')
   const [text, setText] = useState('Edit Here')
+  const [showDelete, setShowDelete] = useState(false)
 
   function invEdit(e) {
     console.log('Clicked', firework)
@@ -20,17 +21,16 @@ function FW_detail ({fwks}) {
   function handlePw(e) {
     setPw(e.target.value)
   }
-  console.log(pw)
 
   function chkPw(e) {
     e.preventDefault()
     if(pw == '123') {
       setShowForm(true)
+      setShowDelete(true)
     } else {
       setShowForm(false)
       alert('Wrong password dude...')
     }
-    console.log(showForm)
   }
 
   useEffect(() => {
@@ -38,7 +38,6 @@ function FW_detail ({fwks}) {
     setFirework(shwFW)
     console.log(shwFW)
   }, [])
-  console.log(firework)
 
   return (
     <div>
@@ -50,6 +49,7 @@ function FW_detail ({fwks}) {
         <input type='button' value="Edit" onClick={invEdit} />
         {showPw ? <form onSubmit={chkPw}> <input type="password" placeholder="Enter Password" value={pw} onChange={handlePw} /> </form> : ''}
         {showForm ? <Link to={`/fireworks/new/${firework.id}`}><input type='button' value='Edit Here' /> </Link> : ''}
+        {showDelete ? <input type='button' id={firework.id} value='Delete' onClick={delObj} /> : false}
       </div>
     </div>
   )

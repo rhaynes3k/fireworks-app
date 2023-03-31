@@ -2,28 +2,28 @@
   "fireworks": [
     {
       "name": "Firecrackers",
-      "qty": "100",
-      "price": 25,
+      "qty": "50",
+      "price": 10,
       "img": "Firecrackers.png",
-      "inStock": 969,
+      "inStock": 193,
       "details": "Loud popping sound after light fuse",
       "id": 1
     },
     {
       "name": "Bottle Rockets",
       "qty": "50",
-      "price": 20,
+      "price": 25,
       "img": "BottleRockets.png",
-      "inStock": 14965,
-      "details": "Flies 200ft up and pop!",
+      "inStock": 190,
+      "details": "200ft up and pop!",
       "id": 2
     },
     {
       "name": "Jumping Jacks",
-      "qty": "20",
-      "price": 10,
+      "qty": "300",
+      "price": 75,
       "img": "jumpingJacks.png",
-      "inStock": 253,
+      "inStock": 198,
       "details": "Spinning colors of light on ground",
       "id": 3
     },
@@ -32,9 +32,63 @@
       "qty": "10",
       "price": 15,
       "img": "roman.png",
-      "inStock": 5996,
+      "inStock": 280,
       "details": "Emits colored ball of light into the sky",
       "id": 4
+    },
+    {
+      "name": "Neon Master Missles",
+      "qty": "20",
+      "price": 45,
+      "img": "Neons.png",
+      "inStock": 39,
+      "details": "Flies into the sky and explodes with colorful bursts of light",
+      "id": 5
+    },
+    {
+      "name": "Pride and Honor",
+      "qty": "1 (25 items)",
+      "price": 120,
+      "img": "PrideHonor.png",
+      "inStock": 0,
+      "details": "Assorted fountains and rockets",
+      "id": 6
+    },
+    {
+      "name": "Party Pack 6",
+      "qty": "1 (60 items)",
+      "price": 140,
+      "img": "PartyPack6.png",
+      "inStock": 90,
+      "details": "Assorted fountains and rockets (90 items)",
+      "id": 7
+    },
+    {
+      "name": "Bucket-o-fun",
+      "qty": "1 (40 items)",
+      "price": 85,
+      "img": "Bucket.png",
+      "inStock": 71,
+      "details": "Assorted fountains and rockets",
+      "id": 8
+    },
+    {
+      "name": "Nuclear Option",
+      "qty": "1",
+      "price": 1000,
+      "img": "genericBomb.jpeg",
+      "inStock": 28,
+      "details": "You don't want to know!!",
+      "id": 9
+    },
+    {
+      "name": "Hellraiser",
+      "qty": "2",
+      "price": "600",
+      "img": "genericBomb.jpeg",
+      "inStock": 9,
+      "details": "Have you seen the movie?!?!",
+      "id": 10
     }
   ]
 }

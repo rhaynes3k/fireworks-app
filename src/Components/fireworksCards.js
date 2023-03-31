@@ -27,6 +27,15 @@ function FireworksCards({addTot, setAddTot, cartList, setCartList, fc, onStockEd
     console.log(cnt)
   }
 
+  function chgCnt(e) {
+    setCnt(parseInt(e.target.value))
+    console.log('Input Count', cnt)
+    if (e.keyCode == 13) {
+                addToCart();
+            }
+  }
+
+
   const addToCart = (e) => {
     let fEdit = {'id': id, 'key': cartList.length, 'name': name, 'inStock': inStock, 'qty': qty, 'price': price, 'cnt': cnt}
     setCartList(cartList => [...cartList, fEdit])
@@ -41,11 +50,11 @@ function FireworksCards({addTot, setAddTot, cartList, setCartList, fc, onStockEd
           <p className='f-card'>{name}</p>
           <img className='fw-img' src={`images/${img}`} alt="N/A" />
         </Link>
-        <h5 className='f-text'>{qty} pcs <br />
+        <h6 className='f-text'>{qty} pcs <br />
           ${price}/pk
-        </h5>
-        <div className='totCnt'>
-          <input className='btn3' type='button' value='-' num={cnt} onClick={subtTot} />{cnt}<input className='btn3' type='button' value='+' num={cnt} onClick={addToTot} />
+        </h6>
+        <div className='counter-btns'>
+          <input className='btn3' type='button' value='-' num={cnt} onClick={subtTot} /> <input className='chgCnt' type='text' value={cnt} onChange={chgCnt} /> <input className='btn3' type='button' value='+' num={cnt} onClick={addToTot} />
         </div>
         <input className= 'btn' type='button' name='cart' value='Add To Cart' id={id} num={cnt} onClick={addToCart} />
         <br />

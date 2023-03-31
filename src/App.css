@@ -20,21 +20,30 @@ p {
   margin-bottom: auto;
 }
 
+.counter-btns {
+  margin-bottom: 10px;
+}
+
 .f-card {
-  font-size: 30px;
+  font-size: 25px;
   margin-top: auto;
   color: white;
 }
 
 .f-text {
-  font-size: 30px;
+  font-size: 25px;
   margin-top: auto;
+  margin-bottom: 10px;
   color: #b54141;
 }
 
 .fw-img {
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
+}
+
+.fw-img:hover {
+  transform: scale(2.0)
 }
 
 .pix {
@@ -42,6 +51,10 @@ p {
   margin-left: auto;
   margin-right: auto;
   width: 80%;
+}
+
+.pix:hover {
+  transform: scale(2.0)
 }
 
 .images {
@@ -162,5 +175,20 @@ h3 {
   height: 30px;
   width: 30px;
   font-size: 20px;
-  margin-bottom: inherit;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+
+.chgCnt {
+  width: 23px;
+  height: 23px;
+  text-align: center;
+  margin-top: 3px;
+  padding-top: 3px;
+}
+
+.counter-btns {
+  margin-top: 5px;
+  display:
+
 }

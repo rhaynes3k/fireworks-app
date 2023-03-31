@@ -60,7 +60,6 @@ function App() {
       })
 
   }
-  console.log(fWorks)
 
   const onEdit = (update) => {
     const newState = fWorks.map(f => {
@@ -86,12 +85,12 @@ function App() {
       })
     }, [])
 
-    function loadCreate(e) {
-      e.preventDefault()
-      setNewUser(true)
-      setHideNewButton(true)
-    }
-
+    // function loadCreate(e) {
+    //   e.preventDefault()
+    //   setNewUser(true)
+    //   setHideNewButton(true)
+    // }
+    //
     function handleUName(e) {
       setUName(e.target.value)
     }
@@ -102,35 +101,44 @@ function App() {
     function handlePassword(e) {
       setPWord(e.target.value)
     }
+    //
+    // function handleNewUserSubmit(e) {
+    //   e.preventDefault()
+    //   console.log('Clicked Submit')
+    //   let newUserSubmit = {uname: uName, email: email, password: pWord}
+    //   console.log(newUserSubmit)
+    //   setUserPw(pWord)
+    //   setUName('')
+    //   setEmail('')
+    //   setPWord('')
+    //   setDivHide(true)
+    // }
+    //
+    // function handleLoginSubmit(e) {
+    //   e.preventDefault()
+    //   console.log('Clicked Login Submit')
+    //   let userLogin = {uName: uName, Password: pWord}
+    //   console.log(userLogin, 'Target', e.target)
+    //   if (pWord == '12345') {
+    //     setUName('')
+    //     setPWord('')
+    //     setDivHide(true)
+    //   }else {
+    //     alert('Wrong password Doofus')
+    //   }
+    // }
 
-    function handleNewUserSubmit(e) {
-      e.preventDefault()
-      console.log('Clicked Submit')
-      let newUserSubmit = {uname: uName, email: email, password: pWord}
-      console.log(newUserSubmit)
-      setUserPw(pWord)
-      setUName('')
-      setEmail('')
-      setPWord('')
-      setDivHide(true)
-
+    function delObj(d) {
+      console.log('Clicked Delete', d.target)
+      fetch(`http://localhost:3500/fireworks/${d.target.id}`, {
+        method: 'DELETE'
+      })
+        .then(res => res.json())
+        .then(res => {
+          console.log(res)
+          console.log(fWorks[d.target.id])
+      })
     }
-
-    function handleLoginSubmit(e) {
-      e.preventDefault()
-      console.log('Clicked Login Submit')
-      let userLogin = {uName: uName, Password: pWord}
-      console.log(userLogin, 'Target', e.target)
-      if (pWord == '12345') {
-        setUName('')
-        setPWord('')
-        setDivHide(true)
-      }else {
-        alert('Wrong password Doofus')
-      }
-    }
-
-
 
   return (
     <div className="App">
@@ -143,25 +151,18 @@ function App() {
           <NavLink to='/'>
             <input type='button' name='home' value='Home'/>
           </NavLink>
-          <NavLink to='fireworks' style={{pointerEvents: pWord != null ? '' : 'none'}} >
+          <NavLink to='fireworks' >
             <input  type='button' name='all' value='All Fireworks'/>
           </NavLink>
           <NavLink to='fireworks/new' style={{pointerEvents: pWord != null ? '' : 'none'}} >
           <input type='button' name='new' value='New Add'/>
           </NavLink>
         </section>
-        {divHide ? null : <div>
-          {hideNewButton ? null : <input type='button' value='New User' label='New User' onClick={loadCreate} />}
-          {newUser ? <form onSubmit={handleNewUserSubmit} ><h3>Create Account</h3><br /><input className='textbox' type='text' placeholder='User Name' value={uName} onChange={handleUName} /><br /><input className='textbox' type='email' placeholder='Email' value={email} onChange={handleEmail} /><br /><input className='textbox' type='password' placeholder='Password' value={userPw} onChange={handlePassword} /><br /><input type='submit' /></form>
-            :
-          <form onSubmit={handleLoginSubmit}><h3>Login</h3><br /><input className='textbox' type='text' placeholder='User Name' value={uName} onChange={handleUName} /><br /><input className='textbox' type='password' placeholder='Password' value={pWord} onChange={handlePassword} /><br /><input type='submit' /><br /></form>}
-          </div>
-        }
         <Routes>
           <Route exact path='/' element={<HomeImage />} />
           <Route exact path='/fireworks' element= {<FireworksContainer fwks={fWorks} onStockEdit={onStockEdit} />} />
           <Route exact path='/fireworks/new' element= {<NewInvForm onAdd={onAdd}/>} />
-          <Route exact path='/fireworks/:id' element= {<FW_detail fwks={fWorks}/>} />
+          <Route exact path='/fireworks/:id' element= {<FW_detail fwks={fWorks} delObj={delObj}/>} />
           <Route exact path='/fireworks/new/:id' element= {<EditForm fwks={fWorks} onEdit={onEdit} />} />
         </Routes>
       </Router>
