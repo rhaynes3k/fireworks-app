@@ -22,14 +22,15 @@ function App() {
 
   const [uName, setUName] = useState('')
   const [email, setEmail] = useState('')
-  const [pWord, setPWord] = useState(null)
+  const [pWord, setPWord] = useState(123)
   const [logIn, setLogIn] = useState(false)
   const [createAcc, setCreateAcc] = useState(false)
   const [newUser, setNewUser] = useState(false)
   const [hideNewButton, setHideNewButton] = useState(false)
   const [divHide, setDivHide] = useState(false)
   const [userPw, setUserPw] = useState(pWord)
-
+  const [shwPw2, setShwPw2] = useState(false)
+  const [shwNavLk, setShwNavLk] = useState(false)
 
   const onAdd = (newAdd) => {
     setFireworks([...fWorks, newAdd])
@@ -140,6 +141,16 @@ function App() {
       })
     }
 
+    function frmPw(e) {
+      e.preventDefault()
+      setShwPw2(true)
+      if(e.target.value === pWord) {
+        setShwNavLk(true)
+      }
+    }
+
+
+
   return (
     <div className="App">
 
@@ -154,8 +165,9 @@ function App() {
           <NavLink to='fireworks' >
             <input  type='button' name='all' value='All Fireworks'/>
           </NavLink>
-          <NavLink to='fireworks/new' style={{pointerEvents: pWord != null ? '' : 'none'}} >
-          <input type='button' name='new' value='New Add'/>
+          <NavLink to='fireworks/new' >
+          <input type='button' name='new' value='New Add' onClick={frmPw}/>
+          {shwPw2 ? <input type='text' placeholder='Password' /> : false}
           </NavLink>
         </section>
         <Routes>
